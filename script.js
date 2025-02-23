@@ -1,4 +1,4 @@
-     // Firebase Configuration
+// Firebase Configuration
 const firebaseConfig = {
      apiKey: "AIzaSyD1TQEAApE3n8kuJ6rzm8Zn-uTn72Z518A",
      authDomain: "realtimelocationsharing-87a7f.firebaseapp.com",
@@ -15,8 +15,11 @@ const database = firebase.database();
 // Leaflet Map Initialization
 const map = L.map('map').setView([0, 0], 2);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+// Initialize MarkerClusterGroup
 const markers = L.markerClusterGroup();
 map.addLayer(markers);
+
 const polylines = {};
 const loadingDiv = document.getElementById('loading');
 const errorDiv = document.getElementById('error');
