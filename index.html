@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Realtime Location Sharing</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.2/dist/MarkerCluster.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.2/dist/MarkerCluster.Default.css" />
-    <style>
-        #map { height: 500px; }
-        #loading { position: absolute; top: 10px; left: 10px; background-color: white; padding: 5px; display: none; }
-        #error { position: absolute; top: 10px; left: 10px; background-color: red; color: white; padding: 5px; display: none; }
-    </style>
+  <title>Realtime Location Sharing</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+  <style>
+    #map { height: 500px; }
+    #status { margin: 10px; font-weight: bold; }
+    button { margin: 10px; padding: 10px; font-size: 16px; }
+  </style>
 </head>
 <body>
-    <div id="loading">Loading...</div>
-    <div id="error"></div>
-    <div id="map"></div>
-    <button id="shareLocation">Share Location</button>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet.markercluster@1.4.2/dist/leaflet.markercluster.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
-    <script src="script.js"></script>
+  <div id="status">Loading...</div>
+  <button onclick="map.setView([0, 0], 2)">Reset Map</button>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
