@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-    <html>
-    <head>
+<html>
+<head>
     <title>Realtime Location Sharing</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.2/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.2/dist/MarkerCluster.Default.css" />
     <style>
-    #map { height: 500px; }
+        #map { height: 500px; }
+        #loading { position: absolute; top: 10px; left: 10px; background-color: white; padding: 5px; display: none; }
+        #error { position: absolute; top: 10px; left: 10px; background-color: red; color: white; padding: 5px; display: none; }
     </style>
-    </head>
-    <body>
+</head>
+<body>
+    <div id="loading">Loading...</div>
+    <div id="error"></div>
     <div id="map"></div>
+    <button id="shareLocation">Share Location</button>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.2/dist/leaflet.markercluster.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
     <script src="script.js"></script>
-    </body>
-    </html>
+</body>
+</html>
